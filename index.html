@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+        </div><!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -242,6 +243,19 @@
             .document-link {
                 padding: 15px;
             }
+
+            .team-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .team-photo img {
+                height: 300px;
+            }
+
+            .team-section {
+                padding: 30px 20px;
+            }
         }
 
         .pulse {
@@ -441,22 +455,126 @@
             opacity: 0.7;
         }
 
-        /* Placeholder para imágenes no encontradas */
-        .image-item img[src$=".jpg"]:not([src*="data:"]) {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+        /* Sección del Equipo */
+        .team-section {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
             color: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .team-section h3 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .team-description {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .team-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .team-photo {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .team-photo:hover {
+            transform: scale(1.02);
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            background: linear-gradient(135deg, #ddd, #f0f0f0);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .team-members-list h4 {
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            color: #fdcb6e;
+            text-align: left;
+        }
+
+        .members-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .member-card {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .member-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .member-number {
+            background: linear-gradient(45deg, #fdcb6e, #e17055);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
-            text-align: center;
-            padding: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 20px;
+            flex-shrink: 0;
         }
 
-        .image-item img[src$=".jpg"]:not([src*="data:"])::before {
-            content: "📷\A Imagen del Proyecto\A (Reemplaza con tu archivo)";
-            white-space: pre-line;
-            text-align: center;
+        .member-details h5 {
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
+            color: white;
+        }
+
+        .member-details p {
+            margin: 0;
+            opacity: 0.8;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -697,6 +815,102 @@
         </footer>
     </div>
 
+
+
+
+
+
+
+
+
+
+        <!-- Sección del Equipo de Trabajo -->
+        <div class="team-section">
+            <h3>👥 Equipo de Trabajo</h3>
+            <p class="team-description">
+                Este proyecto fue desarrollado por un equipo multidisciplinario comprometido con la innovación tecnológica y la accesibilidad
+            </p>
+            
+            <div class="team-content">
+                <div class="team-photo">
+                    <img src="equipo-completo.jpg" alt="Foto del equipo de trabajo">
+                    <div class="photo-overlay">
+                        <span>📸 Nuestro Equipo</span>
+                    </div>
+                </div>
+                
+                <div class="team-members-list">
+                    <h4>Integrantes del Proyecto</h4>
+                    <div class="members-grid">
+                        <div class="member-card">
+                            <div class="member-number">01</div>
+                            <div class="member-details">
+                                <h5>    Adolfo Dariel Cid Fuentes</h5>
+                                <p>EST.TEC.MECATRONICO-JEFE DE PROYECTO/PROGRAMADOR</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card">
+                            <div class="member-number">02</div>
+                            <div class="member-details">
+                                <h5>    Jesús Gabriel Sánchez Tovar </h5>
+                                <p>EST.TEC.MECATRONICO-MECANICO/ELCTRICO</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card">
+                            <div class="member-number">03</div>
+                            <div class="member-details">
+                                <h5>    Ariel Jiménez Sánchez </h5>
+                                <p>EST.TEC.MECATRONICO- MECANICO</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card">
+                            <div class="member-number">04</div>
+                            <div class="member-details">
+                                <h5>Lizbeth Almaraz Uribe</h5>
+                                <p>EST.TEC.MECATRONICO-DISEÑO CAT/DOCUMENTACIÓN</p>
+                            </div>
+                        </div>
+                        
+                        <div class="member-card">
+                            <div class="member-number">05</div>
+                            <div class="member-details">
+                                <h5>    Gerardo Giovanni Herrera Ayala</h5>
+                                <p>EST.TEC.MECATRONICO-ELECTRICO/DOCUMENTACIÓN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
         // Animaciones suaves al hacer scroll
         const observerOptions = {
@@ -797,7 +1011,7 @@
 
         // Simular imágenes para demostración (reemplaza con tus archivos reales)
         document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.image-item img');
+            const images = document.querySelectorAll('.image-item img, .team-photo img');
             images.forEach(img => {
                 // Si la imagen no carga, mostrar placeholder
                 img.onerror = function() {
@@ -806,7 +1020,13 @@
                     this.style.display = 'flex';
                     this.style.alignItems = 'center';
                     this.style.justifyContent = 'center';
-                    this.innerHTML = '📷<br>Reemplaza con<br>tu imagen';
+                    
+                    if (this.parentElement.classList.contains('team-photo')) {
+                        this.innerHTML = '👥<br>Foto del Equipo<br>(Reemplaza con tu archivo)';
+                    } else {
+                        this.innerHTML = '📷<br>Reemplaza con<br>tu imagen';
+                    }
+                    
                     this.style.fontSize = '16px';
                     this.style.textAlign = 'center';
                     this.style.lineHeight = '1.5';
